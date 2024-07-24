@@ -1,0 +1,577 @@
+/*_________________________GLOBAL STYLES_____________________________*/
+
+body {
+    background: #bc6c25;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+h1, h2, h3, p {
+    color: #DDA15e;
+}
+
+/* _____________________GLOBAL NAVBAR______________________________ */
+
+.logo img{
+    height: 50px;
+}
+
+nav {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+nav .logo{
+    display: flex;
+    justify-content: start;
+}
+
+#sidebar {
+    display: none;
+}
+
+.open, .close {
+    display: none;
+}
+
+.open img, .close img {
+    height: 50px;
+}
+
+nav ul {
+    justify-self: end;
+    list-style: none;
+    padding: 0;
+    grid-column: 4 / span 3;
+}
+
+nav ul li {
+    display: inline-block;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #DDA15e;
+}
+
+nav a:hover {
+    color: #fefae0;
+}
+
+/*______________________________GLOBAL FOOTER__________________________*/
+
+footer {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+footer div {
+    grid-column: 1 / span 1;
+    display: flex;
+    justify-content: start;
+}
+
+footer p {
+    grid-column: 3 / span 2;
+    justify-self: center;
+}
+
+footer div a img {
+    height: 50px;
+    padding-right: 20px;
+}
+
+/* ________________________________HOME PAGE______________________________*/
+
+.home {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr 1fr;
+    gap: 10px;
+    min-height: 100%;
+    
+}
+
+.column {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 5px;
+}
+
+.column h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+.column h2, .column h3 {
+    font-size: 2em;
+    margin-bottom: 0;
+    margin-top: 0.5em;
+}
+
+.column.info {
+    grid-column: 1 / span 1;
+    grid-template-rows: auto 1fr;
+    padding-left: 20px;
+    padding-right: 5em;
+}
+
+.column.paint {
+    grid-column: 2 / span 1;
+    overflow: hidden;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.column.photo {
+    grid-column: 3 / span 1;
+    overflow: hidden;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.column div {
+    padding-bottom: 5em;
+}
+
+button {
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background:#DDA15e;
+    margin-top: 10px;
+    border-radius: 2px;
+    padding: 5px 7px;
+
+}
+
+button a {
+    text-decoration: none;
+    color:#fefae0
+}
+
+button:hover {
+    background: #fefae0;
+}
+
+button:hover a {
+    color: #DDA15e;
+}
+
+
+/*________________________ABOUT PAGE__________________________*/
+
+.about {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 10px;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.blog {
+    grid-column: 1 / span 1;
+}
+
+.blog header h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+.blog h2 {
+    margin-top: 0;
+}
+
+.education {
+    grid-column: 1 / span 1;
+}
+
+.work {
+    grid-column: 1 / span 1;
+}
+
+.education h2, .work h2 {
+    margin-bottom: 0.5em;
+}
+
+section h3, section p {
+    margin: 0;
+}
+
+.me {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 2;
+    display: flex;
+    justify-content: center;
+}
+
+.me img {
+    border-radius: 5px;
+}
+
+
+
+/*_________________________PAINTING & PHOTO________________________*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    min-height: 100%;
+    
+}
+
+.display {
+
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+}
+
+.display img {
+    width: 100%;
+}
+
+
+/*________________________SOCIAL PAGE_______________________*/
+
+.links a img {
+    width: 15%;
+    min-width: 100px;
+    padding: auto;
+}
+
+.links header h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.socials button {
+
+    font-size: 2.5em;
+    padding: 10px 17px;
+    margin-top: 2.5em;
+
+}
+
+.socials .phone {
+    margin-top: 3em;
+}
+
+.socials .phone h3{
+
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    font-size: 1.5em;
+}
+
+.socials .phone .number {
+    margin-top: 0;
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+
+
+/*_______________________LARGE SCREEN_________________________*/
+@media screen and (max-width: 1200px) {
+
+    /*__________________________________GLOBAL NAVBAR_____________________*/
+    nav {
+        grid-column: span 3;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+    }
+
+    nav .logo{
+        display: flex;
+        justify-content: start;
+    }
+
+    nav ul {
+        justify-self: end;
+        list-style: none;
+        padding: 0;
+        grid-column: 4 / span 2;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        padding-left: 12px;
+    }
+}
+
+
+/*______________________________MEDIUM SCREEN___________________________*/
+@media screen and (max-width: 980px) {
+
+
+    /*___________________________HOME PAGE__________________________*/
+    .home {
+        grid-template-columns: 1.3fr 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    }
+
+    .home nav {
+        grid-column: span 2;
+        grid-row: 1 / span 1;
+    }
+
+    .home nav ul {
+        justify-self: end;
+        list-style: none;
+        padding: 0;
+        grid-column: 3 / span 3;
+    }
+
+    .column.info {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        grid-template-rows: auto 1fr;
+        padding-left: 20px;
+        padding-right: 5em;
+    }
+
+    .column.paint {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        overflow: hidden;
+        min-height: 100%;
+        min-width: 100%;
+    }
+    
+    .column.photo {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 1;
+        overflow: hidden;
+        min-height: 100%;
+        min-width: 100%;
+    }
+
+    .home footer {
+        grid-column: span 2;
+        grid-row: 4 / span 1;
+        height: 15%;
+    }
+
+
+
+
+    /*_________________________ABOUT PAGE__________________________*/
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        min-height: 100%;
+        overflow: hidden;
+    }
+
+    .about nav {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+    }
+
+    .about nav ul {
+        justify-self: end;
+        list-style: none;
+        padding: 0;
+        grid-column: 3 / span 3;
+    }
+    
+    .blog {
+        grid-column: 1 / span 1;
+    }
+    
+    .education {
+        grid-column: 1 / span 1;
+    }
+    
+    .work {
+        grid-column: 1 / span 1;
+    }
+
+    .me {
+        grid-column: 1/ span 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about footer {
+        grid-column: span 2;
+        height: 15%;
+    }
+
+
+    /*_________________________________PAINTING & PHOTO________________________*/
+
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        min-height: 100%;
+        
+    }
+
+    .gallery nav {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+    }
+
+    .gallery nav ul {
+        justify-self: end;
+        list-style: none;
+        padding: 0;
+        grid-column: 3 / span 3;
+    }
+    
+    .display {
+    
+        grid-column: span 2;
+        grid-template-columns: auto;
+        gap: 5px;
+    }
+    
+    .display img {
+        width: 100%;
+    }
+
+    .socials nav {
+        grid-column: span 2;
+        grid-row: 1 / span 1;
+    }
+    
+    .socials nav ul {
+        justify-self: end;
+        list-style: none;
+        padding: 0;
+        grid-column: 2 / span 4;
+    }
+}
+
+
+/*_________________________SMALL SCREEN______________________*/
+@media screen and (max-width: 725px) {
+
+    /*__________________________________GLOBAL NAVBAR_____________________*/
+    nav {
+        grid-column: span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .open, .close {
+        display: block;
+    }
+
+    .open {
+        position: absolute;
+        top: 10px;
+        right: 100px;
+        padding-top: 25px;
+        padding-right: 20px;
+        z-index: 1;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        background: #bc6c25;
+        justify-self: end;
+        list-style: none;
+        grid-column: 3 / span 3;
+        z-index: 10;
+    }
+
+    nav ul img, nav ul li {
+        padding: 20px;
+    }
+
+    #sidebar:checked ~ ul {
+        display: flex;
+    }
+
+
+    /* ________________________________HOME PAGE______________________________*/
+    .home {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    }
+
+    .column.info {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        grid-template-rows: auto 1fr;
+        padding: 10px 20px;
+    }
+
+    .column.info div {
+        padding-bottom: 0;
+    }
+
+    .column.paint {
+        grid-column: 1/ span 1;
+        grid-row: 3 / span 1;
+        overflow: hidden;
+        min-height: 100%;
+        min-width: 100%;
+    }
+    
+    .column.photo {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+        overflow: hidden;
+        min-height: 100%;
+        min-width: 100%;
+    }
+
+    .column.paint div, .column.photo div {
+        padding-bottom: 3px;
+    }
+
+    .home footer {
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 1;
+        height: 15%;
+    }
+
+    /*_________________________ABOUT PAGE__________________________*/
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        min-height: 100%;
+    }
+
+    .education {
+        grid-column: 1 / span 1;
+    }
+    
+    .work {
+        grid-column: 1 / span 1;
+    }
+
+    .me {
+        grid-column: 1 / span 1;
+    }
+}
+
